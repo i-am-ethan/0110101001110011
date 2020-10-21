@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function success(pos){
+      console.log(pos);
+    }
+
+    function fail(error){
+      alert('位置情報の取得に失敗しました。エラ〜コード:' + error.code);
+    }
+
+    navigator.geolocation.getCurrentPosition(success, fail);
+  </script>
+</body>
+</html>
+
